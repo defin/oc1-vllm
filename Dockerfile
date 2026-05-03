@@ -9,6 +9,7 @@ RUN mkdir -p /models && \
 
 EXPOSE 3333
 
+ENTRYPOINT []
 CMD ["python", "-m", "vllm.entrypoints.openai.api_server", \
      "--model",              "/models/qwen2.5-coder-3b", \
      "--host",               "::", \
