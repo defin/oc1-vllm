@@ -62,7 +62,7 @@ step("Starting vLLM on port 3333")
 os.execv(PYTHON, [
     PYTHON, "-m", "vllm.entrypoints.openai.api_server",
     "--model", MODEL_DIR,
-    "--host",  "0.0.0.0",
+    "--host",  "::",
     "--port",  "3333",
     *VLLM_ARGS,
 ])
