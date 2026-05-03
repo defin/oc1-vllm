@@ -4,7 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV HF_HUB_ENABLE_HF_TRANSFER=1
 
 RUN apt-get update -y && apt-get install -y \
-    python3 python3-pip python3-venv git curl wget nginx supervisor \
+    python3 python3-pip python3-venv git curl wget nginx \
     && rm -rf /var/lib/apt/lists/*
 
 RUN python3 -m venv /opt/vllm-env
@@ -25,4 +25,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/vllm.conf
 
 EXPOSE 3333
 
-CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisor/supervisord.conf"]
+CMD ["/opt/vllm-env/bin/supervisord", "-n", "-c", "/etc/supervisor/conf.d/vllm.conf"]
