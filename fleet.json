@@ -1,0 +1,86 @@
+{
+  "gpu_classes": {
+    "rtx5090":     { "id": "851399fb-7329-4195-a042-d6514b28cf33", "vram_gb": 32, "price_hr": 0.45, "name": "RTX 5090 (32 GB)" },
+    "rtx4090":     { "id": "ed563892-aacd-40f5-80b7-90c9be6c759b", "vram_gb": 24, "price_hr": 0.30, "name": "RTX 4090 (24 GB)" },
+    "rtx3090ti":   { "id": "9998fe42-04a5-4807-b3a5-849943f16c38", "vram_gb": 24, "price_hr": 0.28, "name": "RTX 3090 Ti (24 GB)" },
+    "rtx3090":     { "id": "a5db5c50-cbcb-4596-ae80-6a0c8090d80f", "vram_gb": 24, "price_hr": 0.25, "name": "RTX 3090 (24 GB)" },
+    "rtxa5000":    { "id": "6d4e9e99-d27e-4751-8d7d-393f7d8ea949", "vram_gb": 24, "price_hr": 0.25, "name": "RTX A5000 (24 GB)" },
+    "rtx5080":     { "id": "8065b30b-4a27-434c-8610-222e8df8fad7", "vram_gb": 16, "price_hr": 0.42, "name": "RTX 5080 (16 GB)" },
+    "rtx5070ti":   { "id": "1b8747be-e789-475b-a339-3c1028010d84", "vram_gb": 16, "price_hr": 0.28, "name": "RTX 5070 Ti (16 GB)" },
+    "rtx4080":     { "id": "0d062939-7c01-4aae-a2b1-30e315124e51", "vram_gb": 16, "price_hr": 0.28, "name": "RTX 4080 (16 GB)" },
+    "rtx4070tisuper": { "id": "f1380143-51cd-4bad-80cb-1f86ee6b49fe", "vram_gb": 16, "price_hr": 0.26, "name": "RTX 4070 Ti Super (16 GB)" },
+    "rtx5060ti":   { "id": "5d6b104d-c029-4357-b179-8b662d0a76b2", "vram_gb": 16, "price_hr": 0.18, "name": "RTX 5060 Ti (16 GB)" },
+    "rtx4060ti":   { "id": "2b73eef8-be49-4667-8fc0-5c0cb127cfe0", "vram_gb": 16, "price_hr": 0.22, "name": "RTX 4060 Ti (16 GB)" },
+    "rtx4070ti":   { "id": "de00c90b-904b-4d9e-8fc9-1d9a08eb0932", "vram_gb": 12, "price_hr": 0.24, "name": "RTX 4070 Ti (12 GB)" },
+    "rtx5070":     { "id": "61e8ceee-4479-40c5-9a05-1711f45f931c", "vram_gb": 12, "price_hr": 0.24, "name": "RTX 5070 (12 GB)" },
+    "rtx4070":     { "id": "0798d5aa-2d17-42ee-81b8-ea92e3bc088e", "vram_gb": 12, "price_hr": 0.22, "name": "RTX 4070 (12 GB)" },
+    "rtx3080ti":   { "id": "65247de0-746f-45c6-8537-650ba613966a", "vram_gb": 12, "price_hr": 0.20, "name": "RTX 3080 Ti (12 GB)" },
+    "rtx3060":     { "id": "f51baccc-dc95-40fb-a5d1-6d0ee0db31d2", "vram_gb": 12, "price_hr": 0.08, "name": "RTX 3060 (12 GB)" }
+  },
+  "models": {
+    "qwen2-5-coder-32b": {
+      "display_name": "vllm-qwen2.5-coder-32b",
+      "image": "ghcr.io/defin/oc1-vllm:32b",
+      "gpu_class": "rtx5090",
+      "role": "Chat / design / review — max context, full quality",
+      "hf_model": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
+      "vram_needed_gb": 20
+    },
+    "qwen3-32b": {
+      "display_name": "vllm-qwen3-32b",
+      "image": "ghcr.io/defin/oc1-vllm:qwen3-32b",
+      "gpu_class": "rtx5090",
+      "role": "Hard reasoning / algorithms / architecture (thinking mode)",
+      "hf_model": "Qwen/Qwen3-32B-AWQ",
+      "vram_needed_gb": 20
+    },
+    "deepseek-r1-32b": {
+      "display_name": "vllm-deepseek-r1-32b",
+      "image": "ghcr.io/defin/oc1-vllm:deepseek-r1-32b",
+      "gpu_class": "rtx4090",
+      "role": "Reasoning alt — cheaper than 5090, strong on logic/math",
+      "hf_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
+      "vram_needed_gb": 20
+    },
+    "codestral-22b": {
+      "display_name": "vllm-codestral-22b",
+      "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
+      "gpu_class": "rtx4090",
+      "role": "Best FIM/completion quality — purpose-built for inline code",
+      "hf_model": "mistralai/Codestral-22B-v0.1",
+      "vram_needed_gb": 14
+    },
+    "qwen2-5-coder-14b": {
+      "display_name": "vllm-qwen2.5-coder-14b",
+      "image": "ghcr.io/defin/oc1-vllm:14b",
+      "gpu_class": "rtx3090",
+      "role": "Fast mid-tier — cheaper per task than 32B",
+      "hf_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
+      "vram_needed_gb": 9
+    },
+    "qwen2-5-coder-7b": {
+      "display_name": "vllm-qwen2.5-coder-7b",
+      "image": "ghcr.io/defin/oc1-vllm:7b",
+      "gpu_class": "rtx4070ti",
+      "role": "Ultra-fast completion — always-on cheaply",
+      "hf_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
+      "vram_needed_gb": 5
+    },
+    "qwen2-5-coder-3b": {
+      "display_name": "vllm-qwen2.5-coder-3b",
+      "image": "ghcr.io/defin/oc1-vllm:3b",
+      "gpu_class": "rtx3060",
+      "role": "Cheapest possible completion",
+      "hf_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
+      "vram_needed_gb": 3
+    },
+    "llama4-scout": {
+      "display_name": "vllm-llama4-scout",
+      "image": "ghcr.io/defin/oc1-vllm:llama4-scout",
+      "gpu_class": "rtx4070ti",
+      "role": "10M token context — whole-codebase analysis",
+      "hf_model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+      "vram_needed_gb": 12
+    }
+  }
+}
