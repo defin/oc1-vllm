@@ -43,7 +43,7 @@
       "display_name": "vllm-codestral-22b",
       "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
       "gpu_class": "rtx4090",
-      "hf_model": "mistralai/Codestral-22B-v0.1",
+      "hf_model": "TechxGenus/Codestral-22B-v0.1-AWQ",
       "vram_needed_gb": 14
     },
     "qwen2-5-coder-14b": {
@@ -71,7 +71,7 @@
       "display_name": "vllm-codestral-22b",
       "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
       "gpu_class": "rtx4090",
-      "hf_model": "mistralai/Codestral-22B-v0.1",
+      "hf_model": "TechxGenus/Codestral-22B-v0.1-AWQ",
       "vram_needed_gb": 14
     }
   }
