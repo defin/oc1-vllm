@@ -38,8 +38,8 @@ jobs:
           file: Dockerfile.3b
           push: true
           tags: ghcr.io/defin/oc1-vllm:3b
-          cache-from: type=gha,scope=3b
-          cache-to: type=gha,mode=max,scope=3b
+          cache-from: type=gha,scope=3b-v2
+          cache-to: type=gha,mode=max,scope=3b-v2
 
   build-14b:
     runs-on: ubuntu-latest
