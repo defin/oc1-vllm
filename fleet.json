@@ -66,13 +66,6 @@
       "gpu_class": "rtx3060",
       "hf_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
       "vram_needed_gb": 3
-    },
-    "codestral-22b": {
-      "display_name": "vllm-codestral-22b",
-      "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
-      "gpu_class": "rtx4090",
-      "hf_model": "TechxGenus/Codestral-22B-v0.1-AWQ",
-      "vram_needed_gb": 14
     }
   }
 }
