@@ -22,7 +22,6 @@
       "display_name": "vllm-qwen2.5-coder-32b",
       "image": "ghcr.io/defin/oc1-vllm:32b",
       "gpu_class": "rtx5090",
-      "role": "Chat / design / review — max context, full quality",
       "hf_model": "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ",
       "vram_needed_gb": 20
     },
@@ -30,7 +29,6 @@
       "display_name": "vllm-qwen3-32b",
       "image": "ghcr.io/defin/oc1-vllm:qwen3-32b",
       "gpu_class": "rtx5090",
-      "role": "Hard reasoning / algorithms / architecture (thinking mode)",
       "hf_model": "Qwen/Qwen3-32B-AWQ",
       "vram_needed_gb": 20
     },
@@ -38,7 +36,6 @@
       "display_name": "vllm-deepseek-r1-32b",
       "image": "ghcr.io/defin/oc1-vllm:deepseek-r1-32b",
       "gpu_class": "rtx4090",
-      "role": "Reasoning alt — cheaper than 5090, strong on logic/math",
       "hf_model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B",
       "vram_needed_gb": 20
     },
@@ -46,7 +43,6 @@
       "display_name": "vllm-codestral-22b",
       "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
       "gpu_class": "rtx4090",
-      "role": "Best FIM/completion quality — purpose-built for inline code",
       "hf_model": "mistralai/Codestral-22B-v0.1",
       "vram_needed_gb": 14
     },
@@ -54,7 +50,6 @@
       "display_name": "vllm-qwen2.5-coder-14b",
       "image": "ghcr.io/defin/oc1-vllm:14b",
       "gpu_class": "rtx3090",
-      "role": "Fast mid-tier — cheaper per task than 32B",
       "hf_model": "Qwen/Qwen2.5-Coder-14B-Instruct",
       "vram_needed_gb": 9
     },
@@ -62,7 +57,6 @@
       "display_name": "vllm-qwen2.5-coder-7b",
       "image": "ghcr.io/defin/oc1-vllm:7b",
       "gpu_class": "rtx4070ti",
-      "role": "Ultra-fast completion — always-on cheaply",
       "hf_model": "Qwen/Qwen2.5-Coder-7B-Instruct",
       "vram_needed_gb": 5
     },
@@ -70,7 +64,6 @@
       "display_name": "vllm-qwen2.5-coder-3b",
       "image": "ghcr.io/defin/oc1-vllm:3b",
       "gpu_class": "rtx3060",
-      "role": "Cheapest possible completion",
       "hf_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
       "vram_needed_gb": 3
     },
@@ -78,7 +71,6 @@
       "display_name": "vllm-codestral-22b",
       "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
       "gpu_class": "rtx4090",
-      "role": "Best FIM/completion quality — purpose-built for inline code",
       "hf_model": "mistralai/Codestral-22B-v0.1",
       "vram_needed_gb": 14
     }
