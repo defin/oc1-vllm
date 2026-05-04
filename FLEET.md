@@ -11,14 +11,14 @@
 | **Qwen2.5-Coder-14B** | 9GB | RTX 3090 (24GB) | $0.12 | Fast mid-tier — cheaper per task than 32B |
 | **Qwen2.5-Coder-7B** | 5GB | RTX 4070 Ti (12GB) | $0.12 | Ultra-fast completion, always-on cheaply |
 | **Qwen2.5-Coder-3B** | 3GB | RTX 3060 (12GB) | $0.08 | Cheapest possible completion |
-| **Llama-4-Scout-17B-Q4** | 12GB | RTX 4070 Ti (12GB) | $0.12 | 10M token context — whole-codebase analysis |
+| **Codestral-22B** | 14GB | RTX 4090 (24GB) | $0.30 | Purpose-built FIM — best inline completion quality |
 
 ## Recommended starter fleet
 
 | Name | Model | GPU | Price/hr | Notes |
 |---|---|---|---|---|
 | `oc1` | Qwen2.5-Coder-32B-AWQ | RTX 5090 | $0.29 | Already deployed |
-| `qwen-2-5-coder-3b` | Qwen2.5-Coder-3B | RTX 3060 | $0.08 | Currently on 5090 — overkill, reassign |
+| `qwen-2-5-coder-3b` | Qwen2.5-Coder-3B | RTX 3060 | $0.08 | Cheapest completion |
 | `codestral-22b` | Codestral-22B | RTX 4090 | $0.20 | Best completion quality |
 | `qwen3-32b` | Qwen3-32B-AWQ | RTX 5090 | $0.29 | Thinking/reasoning mode for hard problems |
 

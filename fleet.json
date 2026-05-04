@@ -74,13 +74,13 @@
       "hf_model": "Qwen/Qwen2.5-Coder-3B-Instruct",
       "vram_needed_gb": 3
     },
-    "llama4-scout": {
-      "display_name": "vllm-llama4-scout",
-      "image": "ghcr.io/defin/oc1-vllm:llama4-scout",
-      "gpu_class": "rtx4070ti",
-      "role": "10M token context — whole-codebase analysis",
-      "hf_model": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-      "vram_needed_gb": 12
+    "codestral-22b": {
+      "display_name": "vllm-codestral-22b",
+      "image": "ghcr.io/defin/oc1-vllm:codestral-22b",
+      "gpu_class": "rtx4090",
+      "role": "Best FIM/completion quality — purpose-built for inline code",
+      "hf_model": "mistralai/Codestral-22B-v0.1",
+      "vram_needed_gb": 14
     }
   }
 }
