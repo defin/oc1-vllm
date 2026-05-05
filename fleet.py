@@ -9,11 +9,12 @@ Usage:
 
 import configparser
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
 
-INI = Path.home() / ".config/salad/salad.ini"
+INI = Path(os.environ.get("SALAD_INI", Path.home() / ".config/salad/salad.ini"))
 
 STATUS_COLORS = {
     "running":   "\033[32m",
@@ -25,6 +26,8 @@ RESET = "\033[0m"
 
 
 def load_config():
+    if not INI.exists():
+        sys.exit(f"Config not found: {INI}\nSet SALAD_INI=/path/to/salad.ini or create {INI}")
     cfg = configparser.ConfigParser()
     cfg.read(INI)
     return cfg
