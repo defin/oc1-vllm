@@ -38,7 +38,8 @@ def api(cfg, method, path, body=None):
     data = json.dumps(body).encode() if body else None
     req = urllib.request.Request(url, data=data, method=method)
     req.add_header("Salad-Api-Key", key)
-    req.add_header("Content-Type", "application/json")
+    if data:
+        req.add_header("Content-Type", "application/json")
     with urllib.request.urlopen(req) as r:
         return json.loads(r.read()) if r.length else {}
 
