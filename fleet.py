@@ -9,8 +9,8 @@ Usage:
 
 import configparser
 import json
+import subprocess
 import sys
-import urllib.request
 from pathlib import Path
 
 INI = Path.home() / ".config/salad/salad.ini"
@@ -35,13 +35,14 @@ def api(cfg, method, path, body=None):
     org = cfg["salad"]["organization"]
     proj = cfg["salad"]["project"]
     url = f"https://api.salad.com/api/public/organizations/{org}/projects/{proj}/containers/{path}"
-    data = json.dumps(body).encode() if body else None
-    req = urllib.request.Request(url, data=data, method=method)
-    req.add_header("Salad-Api-Key", key)
-    if data:
-        req.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(req) as r:
-        return json.loads(r.read()) if r.length else {}
+    cmd = ["curl", "-sf", "-X", method, "-H", f"Salad-Api-Key: {key}"]
+    if body:
+        cmd += ["-H", "Content-Type: application/json", "-d", json.dumps(body)]
+    cmd.append(url)
+    result = subprocess.run(cmd, capture_output=True, text=True)
+    if result.returncode != 0:
+        raise RuntimeError(result.stderr.strip() or f"curl exit {result.returncode}")
+    return json.loads(result.stdout) if result.stdout.strip() else {}
 
 
 def models(cfg):
